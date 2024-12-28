@@ -1,33 +1,36 @@
-#background {
+/* #background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-}
+} */
 
 html,
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    /* margin: 0; */
     width: 100%;
-    /* height: 100%; */
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    align-self: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 /* This is centering everything on the page... but we want EVERYTHING to be center of the page...
     What I mean is, move this centering code somewhere else. */
 main {
-    width: 100%;
+    width: 100%; 
     height: 100%;
-    /* display: flex; */
-    /* align-items: start; */
-    /* flex-direction: column; */
-    padding: 16px;
+    display: flex;
+    /* padding: 16px; */
+}
+
+footer {
+    /* Width to be 50% of screen length */
+    width: 50%;
+    background-color: #a2aabb;
 }
 
 h1 {
@@ -79,7 +82,7 @@ code {
     border: 1px solid white;
 }
 
-#news {
+/* #news {
     position: absolute;
     bottom: 16px;
     right: 16px;
@@ -91,87 +94,13 @@ code {
 
 #news:hover {
     background: rgba(255, 255, 255, 0.55);
-}
-
-
-/* nav styles */
-.nav-links {
-    width: 100%;
-    height: 100%;
-    /* top: 5rem; */
-    /* left: 48px; */
-    /* background-color: #ff9776; */
-    /* display: none; */
-    display: flex;
-    align-items: center;
-    /* margin: 0; */
-    /* gap: 16px; */
-}
-
-.nav-links a {
-    /* display: block; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* text-align: center; */
-    /* padding: 10px 0; */
-    /* padding: 10px 12px; */
-    /* color: #111827; */
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-    background-color: #ff9776;
-    color: rgb(78, 80, 86);
-    border-radius: 10px;
-}
-
-
-/* Special button */
-.nav-links a.button {
-    color: white;
-    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-    box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-        inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
-}
-
-.nav-links a.button:hover {
-    color: rgb(230, 230, 230);
-    box-shadow: none;
-}
-
-.expanded {
-    display: unset;
-}
+} */
 
 
 /* Below is to apply styles conditionally */
-
 @media screen and (max-height: 368px) {
     #news {
         display: none;
-    }
-}
-
-  
-@media screen and (min-width: 636px) {
-    .nav-links {
-        margin-left: 5em;
-        display: block;
-        position: static;
-        width: auto;
-        background: none;
-    }
-
-    .nav-links a {
-        display: inline-block;
-        padding: 15px 20px;
     }
 }
 
