@@ -1,0 +1,20 @@
+---
+import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
+import '../styles/global.css';
+---
+
+<header>
+    <nav>
+        <!-- Navigation component... placed in header because there really isn't that much else to the header. -->
+        <div class="nav-links">
+            <!-- Profile picture in header -->
+                <a>
+                    <img src={myProfileImg.src} width="240" height="240" alt="mk39-png Homepage" />
+                    <h1>mk39-png's Portfolio</h1>
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/blog">Blog</a>
+                </a>
+        </div>
+    </nav>
+</header>
