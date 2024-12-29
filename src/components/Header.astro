@@ -2,27 +2,35 @@
 // import '../styles/global.css';
 import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
 ---
+
+
 <header>
     <nav>
         <h1>mk39-png's Portfolio</h1>
 
         <!-- Navigation component... placed in header because there really isn't that much else to the header. -->
         <div class="nav-links">
-            <!-- <section> -->
-            <!-- mk39-png's Portfolio -->
             <a href="/">Home</a>
             <a href="/blog">Projects</a>
             <a class="button" href="https://github.com/mk39-png">Github</a>
 
-            
+            <!-- About section below for future implementations -->
             <!-- <a href="/about">About</a> -->
-            <!-- </section> -->
         </div>
     </nav>
 </header>
 
 
 <style>
+    :root {
+        --charcoal: #364652ff;
+        --night: #071108ff;
+        --thistle: #bfb1c1ff;
+        --french-gray: #b5bec6ff;
+        --columbia-blue: #c7dbe6ff;
+    }
+
+
     header {
         /* Inline Block so that the items can be centered and take up the width 
             of the parent box */
@@ -34,7 +42,8 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
 
         width: 100%;
 
-		background-color: #5197a1;
+		/* background-color: #5197a1; */
+        background-color: var(--columbia-blue);
         border-radius: inherit;
 
         /* NOTE: Below are not required. */
@@ -57,6 +66,10 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
 
         /* To reduce the gap between the bottom of the header and the navlinks */
         margin-bottom: 0.25em;
+
+        text-shadow: 2px 2px #145da0;
+
+        color: #b1d4e0;
 
         /* NOTE: Below are not required. */
         /* margin-top: 0.25em; */
