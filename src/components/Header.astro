@@ -3,11 +3,12 @@
 ---
 <header>
     <nav>
+        <h1>mk39-png's Portfolio</h1>
+
         <!-- Navigation component... placed in header because there really isn't that much else to the header. -->
         <div class="nav-links">
             <!-- <section> -->
             <!-- mk39-png's Portfolio -->
-            <h1>mk39-png's Portfolio</h1>
             <a href="/">Home</a>
             <a href="/blog">Projects</a>
             <a class="button" href="https://github.com/mk39-png">Github</a>
@@ -19,9 +20,19 @@
 
 <style>
     header {
+        /* Inline Block so that the items can be centered and take up the width 
+            of the parent box */
+        display: inline-block;
+
+        /* display: inline-flex; */
+        /* flex-direction: column-reverse; */
+		/* flex-wrap: wrap; */
+
         /* https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs
         /* 'justify-self' aligns block containers within parent! */
-        /* justify-self: center; */
+        justify-items: center;
+
+        width: 100%;
 
         /* height: fit-content; */
         /* max-width: 50lvw; */
@@ -68,7 +79,7 @@
         /* gap: 16px; */
         /* flex-wrap: wrap; */
         /* background: local; */
-        /* background-color: #d1d6e0; */
+        background-color: #839ed3;
     }
 
     .nav-links a {
