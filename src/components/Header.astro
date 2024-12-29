@@ -20,13 +20,20 @@
 <style>
     header {
         /* NOTE: Need 'display: flex' for this to actually center */
-        display: flex;
-		justify-content: center;
+        /* display: flex; */
+        /* display: inherit; */
+		/* justify-content: center; */
+        /* align-items: center; */
+
+        /* https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs */
+        /* 'justify-self' aligns block containers within parent! */
+        justify-self: center;
+        height: fit-content;
 
         /* max-width: 50lvw; */
         /* width: 50vh; */
         /* width: fit-content; */
-        height: auto;
+        /* height: auto; */
         /* margin: 0; */
         /* padding: 0; */
         /* box-sizing: border-box; */
