@@ -38,18 +38,24 @@ import '@fontsource-variable/jost';
 	html, 
 	body {
 		font-family: 'Jost Variable', sans-serif;
-		/* width: 75%; */
+
+
+		/* https://akanksha-sharma.medium.com/display-property-in-css-a-visual-guide-9e6333f75868 */
+		/* Inline-block allows for retaining block-level styling and flowing */
+		display: inline-block;
+		width: 100%;
+		max-width: 100%;
+		
+		justify-content: center;
+
 		/* justify-content: center; */
 		/* align-content: center; */
 		/* align-items: center; */
 		/* display: flex; */
 		/* flex-direction: column; */
 		/* flex-wrap: wrap; */
+		/* background-color: #5197a1; */
 		background-color: #d8d9da;
 		box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
-	}
-	
-	body {
-		background-color: #5197a1;
 	}
 </style>

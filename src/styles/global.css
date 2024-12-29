@@ -8,7 +8,7 @@
 } */
 
 /* This is the formatting for special blocks of text */
-pre {
+/* pre {
     font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
         'DejaVu Sans Mono', monospace;
     font-weight: normal;
@@ -17,9 +17,9 @@ pre {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin: 0;
-}
+} */
 
-code {
+/* code {
     display: inline-block;
     background:
         linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
@@ -27,9 +27,9 @@ code {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 6px 8px;
-}
+} */
 
-.box {
+/* .box {
     padding: 16px;
     background: rgba(255, 255, 255, 1);
     border-radius: 16px;
@@ -42,10 +42,10 @@ code {
     text-decoration: none;
     transition: background 0.2s;
     backdrop-filter: blur(50px);
-}
+} */
 
 /* Below is to apply styles conditionally */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     #news {
         right: 16px;
         left: 16px;
@@ -56,4 +56,4 @@ code {
     h1 {
         line-height: 1.5;
     }
-}
+} */

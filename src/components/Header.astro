@@ -6,11 +6,12 @@
         <!-- Navigation component... placed in header because there really isn't that much else to the header. -->
         <div class="nav-links">
             <!-- <section> -->
-                <h1>mk39-png's Portfolio</h1>
-                <a href="/">Home</a>
-                <a href="/blog">Projects</a>
-                <a class="button" href="https://github.com/mk39-png">Github</a>
-                <a href="/about">About</a>
+            <!-- mk39-png's Portfolio -->
+            <h1>mk39-png's Portfolio</h1>
+            <a href="/">Home</a>
+            <a href="/blog">Projects</a>
+            <a class="button" href="https://github.com/mk39-png">Github</a>
+            <a href="/about">About</a>
             <!-- </section> -->
         </div>
     </nav>
@@ -18,14 +19,28 @@
 
 <style>
     header {
-        /* width: 50%; */
+        /* NOTE: Need 'display: flex' for this to actually center */
+        display: flex;
+		justify-content: center;
+
+        /* max-width: 50lvw; */
+        /* width: 50vh; */
         /* width: fit-content; */
-        /* height: auto; */
+        height: auto;
+        /* margin: 0; */
+        /* padding: 0; */
+        /* box-sizing: border-box; */
+		/* background-color: #5197a1; */
+
     }
 
     h1 {
         font-size: 48px;
         /* margin-top: 0.25em; */
+        /* To reduce the gap between the bottom of the header and the navlinks */
+        margin-bottom: 0.25em;
+		background-color: #5197a1;
+        
         /* padding: 0px 12px; */
     }
 
@@ -39,7 +54,6 @@
 
     .nav-links {
         /* display: unset; */
-        /* width: 100%; */
         /* width: auto; */
         /* max-height: fit-content; */
         /* max-width:max-content; */
@@ -69,14 +83,17 @@
         padding: 10px 12px;
     }
 
+    /* Text highlighting/background for when the user hovers over a link */
     .nav-links a:hover,
     .nav-links a:focus {
+        /* TODO: Put this to be only the length of text... */
+        /* How does one do that? */
         background-color: #ff9776;
         color: rgb(78, 80, 86);
         border-radius: 10px;
     }
 
-    /* Special button */
+    /* Special button used by the Github links... */
     .nav-links a.button {
         color: white;
         background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
@@ -96,14 +113,14 @@
     } */
 
 
-    /* @media screen and (max-width: 768px) { */
-        /* .navlinks { */
+    @media screen and (max-width: 768px) {
+        .navlinks {
             /* flex-wrap: wrap; */
-        /* } */
-/*  */
-        /* .navlinks a.button { */
+        }
+
+        .navlinks a.button {
             /* padding: 14px 18px; */
-        /* } */
-    /* } */
+        }
+    }
 
 </style>
