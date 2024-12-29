@@ -35,22 +35,35 @@ import '@fontsource-variable/jost';
 </html>
 
 <style>
-	html, 
-	body {
+	html {
 		font-family: 'Jost Variable', sans-serif;
 
+		/* Setting width and height to automatically scale with webpage adjustments */
+		width: auto;
+		height: auto;
+	}
+
+	body {
 		/* https://akanksha-sharma.medium.com/display-property-in-css-a-visual-guide-9e6333f75868 */
 		/* Inline-block allows for retaining block-level styling and flowing */
-		display: inline-block;
-		width: 100%;
-		max-width: 100%;
-		
-		/* TODO: Keep these center things for now... */
+		/* display: inline-block; */
+		display: flex;
+		/* width: 50%; */
+		/* max-width: 100%; */
+
+		flex-direction: column;
+		flex-wrap: wrap;
+
+		/* Justify Items controls the alignment of child elements */
+		justify-items: center;
+
+		/* Justify Content controls the alignment of current element */
 		justify-content: center;
 		align-content: center;
 		align-items: center;
 
-		background-color: #d8d9da;
+		/* background-color: #d8d9da; */
+		background-color: #22374b;
 		box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
 	}
 </style>
