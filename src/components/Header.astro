@@ -1,5 +1,6 @@
 ---
 // import '../styles/global.css';
+import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
 ---
 <header>
     <nav>
@@ -12,11 +13,14 @@
             <a href="/">Home</a>
             <a href="/blog">Projects</a>
             <a class="button" href="https://github.com/mk39-png">Github</a>
-            <a href="/about">About</a>
+
+            
+            <!-- <a href="/about">About</a> -->
             <!-- </section> -->
         </div>
     </nav>
 </header>
+
 
 <style>
     header {
@@ -24,15 +28,19 @@
             of the parent box */
         display: inline-block;
 
-        /* display: inline-flex; */
-        /* flex-direction: column-reverse; */
-		/* flex-wrap: wrap; */
-
         /* https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs
         /* 'justify-self' aligns block containers within parent! */
         justify-items: center;
 
         width: 100%;
+
+		background-color: #5197a1;
+        border-radius: inherit;
+
+        /* NOTE: Below are not required. */
+        /* display: inline-flex; */
+        /* flex-direction: column; */
+		/* flex-wrap: wrap; */
 
         /* height: fit-content; */
         /* max-width: 50lvw; */
@@ -42,49 +50,54 @@
         /* margin: 0; */
         /* padding: 0; */
         /* box-sizing: border-box; */
-		background-color: #5197a1;
     }
 
     h1 {
         font-size: 48px;
-        /* margin-top: 0.25em; */
 
         /* To reduce the gap between the bottom of the header and the navlinks */
         margin-bottom: 0.25em;
 
+        /* NOTE: Below are not required. */
+        /* margin-top: 0.25em; */
 		/* background-color: #5197a1; */
         /* padding: 0px 12px; */
     }
 
     h2 {
         /* margin: 0 0 1em; */
-        /* font-weight: normal; */
+        font-weight: normal;
         color: #111827;
         font-size: 20px;
     }
 
 
     .nav-links {
+        /* Flex since navlinks are side-by-side */
+        display: flex;
+
+        /* Center so that navlinks are aligned with h1 header text */
+        justify-content: center;
+
+        margin: 4%;
+        gap: 16px;
+
+        /* NOTE: Below are not required. */
         /* display: unset; */
         /* width: auto; */
-        /* max-height: fit-content; */
-        /* max-width:max-content; */
-        /* height: 100%; */
-        /* top: 5rem; */
         /* left: 48; */
         /* background: none; */
-        /* display: none; */
-        /* display: flex; */
-        /* margin: 0; */
-        /* gap: 16px; */
+        /* max-height: fit-content; */
+        /* max-width: max-content; */
         /* flex-wrap: wrap; */
         /* background: local; */
-        background-color: #839ed3;
+        /* background-color: #839ed3; */
     }
 
     .nav-links a {
-        display: inline-block;
+        /* display: inline-block; */
         /* display: flex; */
+
         color: #111827;
         text-decoration: none;
         font-size: 1.2rem;
@@ -98,8 +111,6 @@
     /* Text highlighting/background for when the user hovers over a link */
     .nav-links a:hover,
     .nav-links a:focus {
-        /* TODO: Put this to be only the length of text... */
-        /* How does one do that? */
         background-color: #ff9776;
         color: rgb(78, 80, 86);
         border-radius: 10px;
@@ -120,10 +131,6 @@
         box-shadow: none;
     }
 
-    /* .expanded {
-        display: unset;
-    } */
-
 
     @media screen and (max-width: 768px) {
         .navlinks {
@@ -134,5 +141,4 @@
             /* padding: 14px 18px; */
         }
     }
-
 </style>

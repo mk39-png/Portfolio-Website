@@ -54,11 +54,12 @@ import '@fontsource-variable/jost';
 	}
 
 	body {
-		/* Max Width to be 75% of parent's width... */
-		max-width: 75%;
+		/* Max Width using rem to be relative to the viewport size */
+		/* That way, the user can zoom in and out while the content size remains constant */
+		max-width: 50rem;
 
 		background-color: #d8d9da;
-		/* background-color: #22374b; */
+        border-radius: 10px;
 		box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
 	}
 </style>
