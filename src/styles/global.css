@@ -7,52 +7,6 @@
     z-index: -1;
 } */
 
-html,
-body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    width: 100%;
-    /* justify-content: center; */
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-/* This is centering everything on the page... but we want EVERYTHING to be center of the page...
-    What I mean is, move this centering code somewhere else. */
-main {
-    width: 100%; 
-    height: 100%;
-    display: flex;
-    /* padding: 16px; */
-}
-
-footer {
-    /* Width to be 50% of screen length */
-    width: 50%;
-    background-color: #a2aabb;
-}
-
-h1 {
-    font-size: 22px;
-    /* margin-top: 0.25em; */
-}
-
-h2 {
-    /* margin: 0 0 1em; */
-    /* font-weight: normal; */
-    color: #111827;
-    font-size: 20px;
-}
-
-p {
-    color: #4b5563;
-    font-size: 16px;
-    /* line-height: 24px; */
-    /* letter-spacing: -0.006em; */
-    margin: 0;
-}
-
 /* This is the formatting for special blocks of text */
 pre {
     font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
@@ -80,9 +34,7 @@ code {
     background: rgba(255, 255, 255, 1);
     border-radius: 16px;
     border: 1px solid white;
-}
 
-/* #news {
     position: absolute;
     bottom: 16px;
     right: 16px;
@@ -92,27 +44,8 @@ code {
     backdrop-filter: blur(50px);
 }
 
-#news:hover {
-    background: rgba(255, 255, 255, 0.55);
-} */
-
-
 /* Below is to apply styles conditionally */
-@media screen and (max-height: 368px) {
-    #news {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    #links {
-        flex-wrap: wrap;
-    }
-
-    #links a.button {
-        padding: 14px 18px;
-    }
-
     #news {
         right: 16px;
         left: 16px;

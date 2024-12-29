@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import '@fontsource-variable/jost';
 ---
 
 <!-- 
@@ -32,3 +33,23 @@ import '../styles/global.css';
 		</Footer>
 	</body>
 </html>
+
+<style>
+	html, 
+	body {
+		font-family: 'Jost Variable', sans-serif;
+		/* width: 75%; */
+		/* justify-content: center; */
+		/* align-content: center; */
+		/* align-items: center; */
+		/* display: flex; */
+		/* flex-direction: column; */
+		/* flex-wrap: wrap; */
+		background-color: #d8d9da;
+		box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+	}
+	
+	body {
+		background-color: #5197a1;
+	}
+</style>
