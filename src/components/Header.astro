@@ -11,7 +11,7 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
         <!-- Navigation component... placed in header because there really isn't that much else to the header. -->
         <div class="nav-links">
             <a href="/">Home</a>
-            <a href="/blog">Projects</a>
+            <a href="/projects">Projects</a>
             <a class="button" href="https://github.com/mk39-png">Github</a>
 
             <!-- About section below for future implementations -->
@@ -26,10 +26,10 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
         --charcoal: #364652ff;
         --night: #071108ff;
         --thistle: #bfb1c1ff;
+		--raw-umber: #916953ff;
         --french-gray: #b5bec6ff;
         --columbia-blue: #c7dbe6ff;
     }
-
 
     header {
         /* Inline Block so that the items can be centered and take up the width 
@@ -45,6 +45,8 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
 		/* background-color: #5197a1; */
         background-color: var(--columbia-blue);
         border-radius: inherit;
+
+		box-shadow: 1px 4px 10px var(--charcoal);
 
         /* NOTE: Below are not required. */
         /* display: inline-flex; */
@@ -62,28 +64,16 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
     }
 
     h1 {
-        font-size: 48px;
+        font-size: 3rem;
 
-        /* To reduce the gap between the bottom of the header and the navlinks */
+        /* To reduce the gap between the top & bottom of the header and the navlinks */
+        margin-top: 0.4em;
         margin-bottom: 0.25em;
 
-        text-shadow: 2px 2px #145da0;
+        text-shadow: 2px 2px var(--french-gray);
 
-        color: #b1d4e0;
-
-        /* NOTE: Below are not required. */
-        /* margin-top: 0.25em; */
-		/* background-color: #5197a1; */
-        /* padding: 0px 12px; */
+        color: var(--night);
     }
-
-    h2 {
-        /* margin: 0 0 1em; */
-        font-weight: normal;
-        color: #111827;
-        font-size: 20px;
-    }
-
 
     .nav-links {
         /* Flex since navlinks are side-by-side */
@@ -95,7 +85,7 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
         margin: 4%;
         gap: 16px;
 
-        /* NOTE: Below are not required. */
+        /* NOTE: Below are for experimentation. */
         /* display: unset; */
         /* width: auto; */
         /* left: 48; */
@@ -108,10 +98,7 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
     }
 
     .nav-links a {
-        /* display: inline-block; */
-        /* display: flex; */
-
-        color: #111827;
+        color: var(--night);
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: bold;
@@ -124,15 +111,15 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
     /* Text highlighting/background for when the user hovers over a link */
     .nav-links a:hover,
     .nav-links a:focus {
-        background-color: #ff9776;
-        color: rgb(78, 80, 86);
+        background-color: var(--french-gray);
+        color: var(--charcoal);
         border-radius: 10px;
     }
 
     /* Special button used by the Github links... */
     .nav-links a.button {
-        color: white;
-        background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+        color: var(--night);
+        background: linear-gradient(83.21deg, var(--french-gray) 0%, var(--thistle) 100%);
         box-shadow:
             inset 0 0 0 1px rgba(255, 255, 255, 0.12),
             inset 0 -2px 0 rgba(0, 0, 0, 0.24);
@@ -144,14 +131,15 @@ import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
         box-shadow: none;
     }
 
-
+    /* TODO: Change the navigation bar to be a drop-down menu 
+        for mobile devices */
     @media screen and (max-width: 768px) {
         .navlinks {
-            /* flex-wrap: wrap; */
+            flex-wrap: wrap;
         }
 
         .navlinks a.button {
-            /* padding: 14px 18px; */
+            padding: 14px 18px;
         }
     }
 </style>

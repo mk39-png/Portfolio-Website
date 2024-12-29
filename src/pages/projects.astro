@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
+import '../styles/global.css'
+---
+<Layout>
+    <main>
+        <h1>Projects</h1>
+
+        <div class="project">
+            <div class="project-img">
+                <img src={myProfileImg.src} width="140" height="140" alt="mk39-png Homepage" />
+            </div>
+            <div class="project-name">
+                Groovifier | 2024
+            </div>
+            <div class="project-description">
+                Desc
+            </div>
+        </div>
+
+        <div class="project">
+            <h2>Groovifer • 2024</h2>
+            <p>
+                Placeholder
+            </p>
+        </div>
+
+        <div class="project">
+            <img src={myProfileImg.src} width="140" height="140" alt="mk39-png Homepage" />
+            <h2>Nice Data Visualizer • 2024</h2>
+            <p>
+                Placeholdermerjbnnnnnnnnnnnnnnnnnnnnnnnnnn
+            </p>
+        </div>
+	</main>
+</Layout>
+
+
+<style>
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout */
+    .wrapper {
+        display: grid;
+        /* grid-template-columns:max-content  repeat(3, 1fr); */
+        grid-template-columns: max-content;
+        grid-template-rows: max-content;
+
+        border: 1px;
+        
+        gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+    
+    .project-img {
+        grid-column: 1;
+        grid-row: 1/2;
+    }
+
+    .project-name {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .project-description {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+
+
+
+    /* TODO: Use grids for each entry! */
+    main {
+		padding: 16px;
+		font-size: large;
+
+		display: inline-block;
+	}
+
+    h2 {
+        margin-top: 0.01em;
+        margin-bottom: 0.01em;
+
+        /* padding-top: 0.5em; */
+        /* padding-bottom: 0.5em; */
+    }
+
+    .project {
+		/* flex-direction: row; */
+        /* flex-wrap: wrap; */
+
+        flex-wrap: wrap;
+        display: inline-flex;
+        justify-content: flex-start;
+    }
+</style>

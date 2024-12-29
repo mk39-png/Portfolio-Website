@@ -3,39 +3,128 @@ import Layout from '../layouts/Layout.astro';
 import myProfileImg from '../assets/pfp_alpha_1920x1920.png';
 import '../styles/global.css'
 ---
+
 <!-- So, this is saying "use the Layout.astro component..." -->
 <Layout>
-	<!-- TODO: Custom font... aka jost -->
 	<main>
-		<!-- TODO: Put 3D canvas here or whatnot... -->
+		<!-- TODO: Maybe implement three.js interactivity? -->
 
-		<img src={myProfileImg.src} width="140" height="140" alt="mk39-png Homepage" />
-		<!-- <code><pre>src/pages</pre></code> -->
-		This is centering everything on the page... but we want EVERYTHING to be center of the page...
-		What I mean is, move this centering code somewhere else.
-		This is centering everything on the page... but we want EVERYTHING to be center of the page...
-    	What I mean is, move this centering code somewhere else.
-		This is centering everything on the page... but we want EVERYTHING to be center of the page...
-    	What I mean is, move this centering code somewhere else.
-		This is centering everything on the page... but we want EVERYTHING to be center of the page...
-    	What I mean is, move this centering code somewhere else.
+		<div class="bob">
+			<img src={myProfileImg.src} width="140" height="140" alt="mk39-png Homepage" />
+				<!-- <code><pre>src/pages</pre></code> -->
+		</div>
+
+		<div class="bio">
+			<h2>mk39-png</h2>
+			<h3>Full Time Student & Software Developer </h3>
+			<p>
+				Hello viewer! I'm a senior studying computer science at Northwestern University.
+				I enjoy experimenting with computer graphics and working in the intersection 
+				between computer science and visual arts.
+			</p>
+		</div>
 	</main>
 </Layout>
 
 
 <!-- BIG NOTE: Do not include any styling for main... -->
 <style>
-	/* This is centering everything on the page... but we want EVERYTHING to be center of the page...
-    What I mean is, move this centering code somewhere else. */
+	:root {
+        --charcoal: #364652ff;
+        --night: #071108ff;
+        --thistle: #bfb1c1ff;
+		--raw-umber: #916953ff;
+        --french-gray: #b5bec6ff;
+        --columbia-blue: #c7dbe6ff;
+    }
+
 	main {
-		/* margin: */
 		padding: 16px;
+		font-size: large;
+
+		/* Below is for experimenting. */
 		/* width: 100%;  */
 		/* height: 100%; */
-		/* display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		align-items: center; */
+		display: flex;
+		flex-direction: row;
+		/* flex-wrap: wrap; */
+		/* align-items: center;  */
 		/* padding: 16px; */
 	}
+
+	/* Bobbing motion */
+	.bob {
+		/* Dimensions adjustment */
+		width: 100px;
+		height: 100px;
+		padding-right: 4rem;
+
+		/* Using the background color to see space taken */
+		/* background-color: red; */
+		display: block;
+		align-self: center;
+		box-shadow: 10px;
+
+		animation: infinite;
+		animation-name: movement;
+		animation-duration: 1.5s;
+		animation-direction: alternate, reverse, normal;
+	}
+
+	/* To hold other info */
+	.bio {
+		padding: 16px;
+		background: rgb(238, 232, 232);
+		border-radius: 16px;
+		backdrop-filter: blur(50px);
+	}
+
+	h3 {
+		color: var(--charcoal);
+	}
+
+	/* Below is formatting for a corner news box */
+	/* .new {
+		padding: 16px;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 16px;
+		border: 1px solid white;
+
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		max-width: 300px;
+		text-decoration: none;
+		transition: background 0.2s;
+		backdrop-filter: blur(50px);
+	} */
+
+	/* Below is to apply styles conditionally */
+	@media screen and (max-width: 768px) {
+		#new {
+			right: 16px;
+			left: 16px;
+			bottom: 2.5rem;
+			max-width: 100%;
+		}
+
+		h1 {
+			line-height: 1.5;
+		}
+	}
+
+	/* The animation code */
+	@keyframes movement {
+		from {
+			translate: 0 1vw;
+			scale: 102% 94%;
+		}
+
+		to {
+			translate: 0 0;
+			scale: 100% 102%;
+		}
+	}
+
+
 </style>

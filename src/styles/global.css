@@ -1,3 +1,6 @@
+/* Below code here for refernece from the starter code. */
+
+
 /* #background {
     position: fixed;
     top: 0;
@@ -27,33 +30,4 @@
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 6px 8px;
-} */
-
-/* .box {
-    padding: 16px;
-    background: rgba(255, 255, 255, 1);
-    border-radius: 16px;
-    border: 1px solid white;
-
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    max-width: 300px;
-    text-decoration: none;
-    transition: background 0.2s;
-    backdrop-filter: blur(50px);
-} */
-
-/* Below is to apply styles conditionally */
-/* @media screen and (max-width: 768px) {
-    #news {
-        right: 16px;
-        left: 16px;
-        bottom: 2.5rem;
-        max-width: 100%;
-    }
-
-    h1 {
-        line-height: 1.5;
-    }
 } */
