@@ -1,19 +1,7 @@
 # mk39-png's Portfolio Website
 
-## 🚀 Project Structure
+## Hello! This is the repository for my portoflio website.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> Here, you will find links to my projects hosted on GitHub.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+This website is built on the starter code for Astro.
